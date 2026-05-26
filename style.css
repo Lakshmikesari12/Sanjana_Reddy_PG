@@ -235,5 +235,35 @@ grid-template-columns:1fr;
             padding: 0 15px !important;
         }
     }
+    header, .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        height: auto; /* Lets the height adapt naturally */
+    }
+
+    /* Target your logo image container */
+    .header-container img, .logo-class {
+        width: 60px !important;  /* Shrinks the oversized logo */
+        height: 60px !important;
+        object-fit: cover;
+    }
+
+    /* Target the text heading */
+    .header-container h1, .header-title-class {
+        font-size: 18px !important; /* Reduces the massive text size */
+        line-height: 1.3;
+        text-align: center;
+        flex: 1; /* Allows it to occupy central space evenly */
+        margin: 0 10px;
+    }
+
+    /* Target the hamburger menu icon */
+    .menu-icon-class, header .fa-bars {
+        font-size: 24px !important; /* Keeps the menu icon a standard clickable size */
+        cursor: pointer;
+    }
 
 

@@ -16,7 +16,7 @@ background:#f5f5f5;
 header{
 position:fixed;
 width:100%;
-background:rgb(240, 220, 235);
+background:rgb(253, 251, 253);
 z-index:1000;
 box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
@@ -47,6 +47,7 @@ list-style:none;
 }
 
 .nav-links a{
+    text-align: right;
 text-decoration:none;
 color:#333;
 font-weight:600;
@@ -193,8 +194,8 @@ padding:20px;
 }    
 
 h1{
-    font-size: 25px;
-  margin-top: 170px;
+    font-size: 0px;
+    margin-top: 100px;
 }
 
 
@@ -220,6 +221,19 @@ left:0;
 .about-container{
 grid-template-columns:1fr;
 }
+/* Target the container wrapping your navigation menu buttons */
+header, .header-container, nav {
+    display: flex;
+    align-items: center; /* Vertically centers the logo, text, and links */
+    justify-content: space-between; /* Pushes the left content and right content apart */
+}
+
+/* Target the list or block of menu links specifically */
+.nav-links, .menu-items, ul {
+    display: flex;
+    gap: 20px; /* Adjust this number to change the spacing between each button */
+    margin-left: auto; /* This is the magic line that pushes them completely to the right */
+}
 
     /* target screens smaller than laptops */
 
@@ -236,6 +250,9 @@ grid-template-columns:1fr;
             padding: 0 15px !important;
         }
     }
+/* Mobile Responsive Header Fix */
+
+    /* Assuming your header container has a class or tag name */
     header, .header-container {
         display: flex;
         align-items: center;

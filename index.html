@@ -378,22 +378,7 @@ All Rights Reserved.
 </p>
 
 </footer>
-<script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
 
-    // Toggle the 'active' class when hamburger icon is clicked
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
-    // Optional: Closes the menu automatically after a user clicks an item
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-        });
-    });
-</script>
 <script src="script.js"></script>
 
 </body>

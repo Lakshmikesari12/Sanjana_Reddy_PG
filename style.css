@@ -184,8 +184,61 @@ color:white;
 text-align:center;
 padding:20px;
 }
+/* Navigation Container Base Flex settings (Ensure header/nav stays aligned) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
 
-@media(max-width:768px){
+/* Hide the hamburger menu icon on desktop layouts */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Shows the bars icon on mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hides the items by default */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%; /* Positions right beneath the header banner */
+        left: 0;
+        background-color: #ffffff; /* Matches your header look */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    /* When the menu is toggled active via JavaScript, display the links */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 12px 0;
+        width: 100%;
+    }
+
+    .nav-links li a {
+        display: block;
+        font-size: 18px;
+        color: #333;
+        text-decoration: none;
+    }
+}
+
 
 .hero-content{
     font-size: 20px;
@@ -201,6 +254,7 @@ h1{
 
 .menu-toggle{
 display:block;
+padding-right: 00px;
 }
 
 .nav-links{
@@ -249,7 +303,7 @@ header, .header-container, nav {
             display: block !important;
             padding: 0 15px !important;
         }
-    }
+    
 /* Mobile Responsive Header Fix */
 
     /* Assuming your header container has a class or tag name */
